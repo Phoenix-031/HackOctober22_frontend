@@ -33,4 +33,18 @@ const changeEmail = async (email) => {
     
 }
 
-export {changeProfilePassword,changeUsername,changeEmail}
+const getUser = async () => {
+    const response = await axios.get(`http://localhost:6723/api/user/${localStorage.getItem('user')}`)
+    return response
+}
+
+const updateProfilePic = async (picture) => {
+    // console.log(picture)
+    // return picture
+    const response = await axios.patch(`http://localhost:6723/api/user/profilepic/${localStorage.getItem('user')}`,{
+        picture,
+    })
+
+    return response
+}
+export {changeProfilePassword,changeUsername,changeEmail,getUser,updateProfilePic}

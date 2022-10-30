@@ -1,5 +1,5 @@
-import {React,useState} from 'react'
-import { changeEmail, changeProfilePassword, changeUsername } from '../../api/api.user'
+import {React,useEffect,useState} from 'react'
+import { changeEmail, changeProfilePassword, changeUsername, getUser, updateProfilePic } from '../../api/api.user'
 import pImg from '../../assets/img1.jpg'
 
 const Profile = () => {
@@ -8,6 +8,40 @@ const Profile = () => {
   const [cpass,setCpass] = useState("")
   const [username,setUsername] = useState("")
   const [email,setEmail] = useState("")
+  const [profileurl,setProfileurl] = useState("")
+  const [image,setImage] = useState("")
+
+  useEffect(() => {
+    const getprofile = async () => {
+      const profile = await getUser()
+      setProfileurl(profile.data.userinfo.profilePic)
+    }
+    getprofile()
+  },[])
+
+  const handleimageUpload = (e) => {
+    e.preventDefault()
+    document.getElementById('imageupload').click()
+  }
+
+  const defaultimgupload = async (e) => {
+    const file =e.target.files[0]
+    console.log(file)
+    const render = new FileReader()
+    render.readAsDataURL(file)
+    render.onloadend = async() => {
+      setImage(render.result)
+      // console.log(render.result)
+
+       const response = await updateProfilePic(render.result)
+       console.log(response)
+
+       if(response.data.success) {
+        setProfileurl(response.data.profileimg)
+       }
+    }
+
+  }
 
   const handlePasswordChange = async (e) => {
     e.preventDefault()
@@ -37,15 +71,14 @@ const Profile = () => {
     e.preventDefault()
 
     const response = await changeUsername(username)
+    console.log(response)
 
       if(response.data.success) {
         alert("Username changed successfully")
-        setPass("")
-        setCpass("")
+        setUsername("")
       } else {
         alert(response.data.msg)
-        setPass("")
-        setCpass("")
+        setUsername("")
       }
     }
 
@@ -56,19 +89,23 @@ const Profile = () => {
 
       if(response.data.success) {
         alert("Email changed successfully")
-        setPass("")
-        setCpass("")
+        setEmail("")
       } else {
         alert("Email changed failed")
-        setPass("")
-        setCpass("")
+        setEmail("")
       }
     }
-  
   return (
     <div className='max-w-xl w-w1 shadow-profileshadow rounded-lg'>
       <form className='flex flex-col gap-6 justify-center items-center border-white p-10 w-full'>
-        <img src={pImg} alt="profile" className='w-profile h-profile object-cover rounded-full mb-20'/>
+        <div className='flex flex-col justify-center items-center gap-4'>
+          <img src={profileurl} alt="profile" className='w-profile h-profile object-cover rounded-full mb-5'/>
+          <input type="file" hidden id='imageupload'
+          onChange={defaultimgupload}
+          />
+          
+          <button className='text-2xl text-gray-900 font-medium font-nunito bg-green-500 px-10 py-3 capitalize rounded-lg flex gap-4' onClick={handleimageUpload}><i className="fa-solid fa-upload text-2xl"></i>upload</button>
+        </div>
         <label htmlFor="username" className='self-start text-xl font-semibold text-white font-nunito'>Change Username</label>
         <div className='flex gap-3 justify-center items-center w-full'>
           <input type="text" id="username" className='h-16 w-full rounded-xl text-xl font-semibold font-nunito pl-3 text-black focus:outline-none'
