@@ -8,6 +8,7 @@ const VerifyUser = () => {
 
   useEffect(() => {
     const verifyEmailCall = async () => {
+      console.log(params.token)
       await verify(params.token);
     };
 
