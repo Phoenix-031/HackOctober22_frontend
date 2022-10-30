@@ -1,16 +1,29 @@
+import { useEffect } from 'react'
 import {React,useState} from 'react'
 import { Link,useNavigate } from 'react-router-dom'
+import { getUser } from '../../api/api.user'
 import ProfileImg from '../../assets/img1.jpg'
 import Dropdown from '../Dropdown/Dropdown'
 
 const Navbar = () => {
 
   const navigate = useNavigate()
-    const [open,setOpen] =useState(false)
+  const [open,setOpen] =useState(false)
+  const [profileurl,setProfileurl] = useState("")
 
     const handleClick = () => {
       setOpen(!open)
     }
+
+  useEffect(() => {
+    const getuser = async () => {
+      const response = await getUser()
+      // console.log(response)
+      setProfileurl(response.data.userinfo.profilePic)
+    }
+
+    getuser()
+  },[])
     
   
   return (
@@ -40,7 +53,7 @@ const Navbar = () => {
                  </button>
                 {/* <Link to={`/profile/${localStorage.getItem('user')}`}> */}
                   <div>
-                    <img className="topImg w-20 h-20 object-cover border-black rounded-full ml-4 cursor-pointer" src={ProfileImg} alt="profile" onClick={handleClick}/>
+                    <img className="topImg w-20 h-20 object-cover border-black rounded-full ml-4 cursor-pointer" src={profileurl} alt="profile" onClick={handleClick}/>
                     {
                       open && <Dropdown />
                     }
