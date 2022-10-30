@@ -160,7 +160,7 @@ const UpoadFile = () => {
         hidden
          />
       {filename && <div className='flex gap-4 justify-center items-center text-xl font-semibold font-nunito text-black p-4 py-5 px-10 bg-green-200 mt-5 rounded-lg text-center'>
-        <i className="fa-solid fa-square-xmark text-4xl cursor-pointer text-red-600" onClick={(e) => {
+        <i className="fa-solid fa-square-xmark text-4xl cursor-pointer text-red-600 hover:opacity-80" onClick={(e) => {
           setFilename("")
           setFile("")
         }}></i>
