@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import {React,useState} from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 import { getUser } from '../../api/api.user'
-import ProfileImg from '../../assets/img1.jpg'
 import Dropdown from '../Dropdown/Dropdown'
 
 const Navbar = () => {
