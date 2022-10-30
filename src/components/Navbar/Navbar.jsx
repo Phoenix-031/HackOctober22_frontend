@@ -1,12 +1,11 @@
 import { useEffect } from 'react'
 import {React,useState} from 'react'
-import { Link,useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { getUser } from '../../api/api.user'
 import Dropdown from '../Dropdown/Dropdown'
 
 const Navbar = () => {
 
-  const navigate = useNavigate()
   const [open,setOpen] =useState(false)
   const [profileurl,setProfileurl] = useState("")
 

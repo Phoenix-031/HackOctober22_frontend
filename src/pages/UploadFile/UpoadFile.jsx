@@ -1,7 +1,7 @@
 import React from 'react'
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { useState } from 'react';
-import { Navigate,useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { fileUpload } from '../../api/api.file';
 
 const UpoadFile = () => {

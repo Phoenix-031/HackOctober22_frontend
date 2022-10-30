@@ -3,7 +3,6 @@ import {React,useState} from 'react'
 import { useNavigate, Link } from "react-router-dom";
 import { loginUser } from '../../api/api.auth';
 import LOGO from '../../assets/HGDRY.png'
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -21,10 +20,11 @@ const Login = () => {
   if (res.data.success) {
     localStorage.setItem("user",res.data.accessToken)
     // console.log(res.data)
-    toast.error("something went wrong")
+    // toast.error("something went wrong")
     navigate("/");
   } else {
-    toast.error("something went wrong")
+    // toast.error("something went wrong")
+    alert("something went wrong");
   }
 
   // try {

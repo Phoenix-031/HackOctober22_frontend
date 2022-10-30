@@ -61,7 +61,7 @@ const Register = () => {
         </div>
        
         <div className="input-box button">
-            <button type='Submit' className='flex justify-center items-center w-full h-max p-4 bg-yellowtheme font-serif font-normal rounded-xl text-xl font-semibold'>Register</button>
+            <button type='Submit' className='flex justify-center items-center w-full h-max p-4 bg-yellowtheme font-serif rounded-xl text-xl font-semibold'>Register</button>
         </div>
       </form>
       <div className="text">

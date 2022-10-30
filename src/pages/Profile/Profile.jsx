@@ -1,6 +1,6 @@
 import {React,useEffect,useState} from 'react'
 import { changeEmail, changeProfilePassword, changeUsername, getUser, updateProfilePic } from '../../api/api.user'
-import pImg from '../../assets/img1.jpg'
+
 
 const Profile = () => {
 
@@ -9,7 +9,7 @@ const Profile = () => {
   const [username,setUsername] = useState("")
   const [email,setEmail] = useState("")
   const [profileurl,setProfileurl] = useState("")
-  const [image,setImage] = useState("")
+  // const [image,setImage] = useState("")
 
   useEffect(() => {
     const getprofile = async () => {
@@ -30,7 +30,7 @@ const Profile = () => {
     const render = new FileReader()
     render.readAsDataURL(file)
     render.onloadend = async() => {
-      setImage(render.result)
+      // setImage(render.result)
       // console.log(render.result)
 
        const response = await updateProfilePic(render.result)
