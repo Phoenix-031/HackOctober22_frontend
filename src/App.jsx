@@ -13,6 +13,7 @@ import './components/Footer/footer.css'
 import  './components/Hero/hero.css'
 import './components/Courses/courses.css'
 import './pages/UploadFile/Page2.css'
+import './components/About/About.css'
 import VerifyUser from './pages/Verify/Verifyuser';
 import UpoadFile from './pages/UploadFile/UpoadFile';
 import { useEffect } from 'react';
