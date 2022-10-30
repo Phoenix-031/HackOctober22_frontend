@@ -12,6 +12,7 @@ const VerifyUser = () => {
     };
 
     verifyEmailCall();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
