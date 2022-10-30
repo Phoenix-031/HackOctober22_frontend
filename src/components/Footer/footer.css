@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Poppins&family=Roboto+Slab:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+#footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: #1A192E;
+}
+#footer .col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-top: 40px;
+}
+#footer .col .col-heading h4 {
+  font-size: 15px;
+}
+#footer .col .col-container {
+  display: flex;
+}
+#footer .col .col-container .col-img img {
+  width: 80px;
+  margin-right: 30px;
+}
+#footer .col .col-container .col-text h4 {
+  color: #F9C041;
+  font-size: 30px;
+  font-weight: 500;
+  padding-top: 20px;
+}
+#footer .col .col-container .col-text h5 {
+  color: #F9C041;
+  font-weight: 500;
+  font-size: 20px;
+}
+#footer .col .col-container .col-text p {
+  color: #F9C041;
+  font-size: 15px;
+  margin: 10px 0 8px 0;
+}
+#footer .col .col-container .col-text .follow {
+  margin-top: 60px;
+}
+#footer .col .col-container .col-text .follow h4 {
+  font-size: 15px;
+  color: #F9C041;
+}
+#footer .col .col-container .col-text .follow .icons {
+  padding-top: 40px;
+}
+#footer .col .col-container .col-text .follow .icons i {
+  color: #F9C041;
+  padding-right: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+#footer .col .col-btn {
+  border: none;
+  border-radius: 6px;
+}
+#footer .col .col-btn a {
+  color: #1A192E;
+  text-decoration: none;
+}
+#footer .col .col-btn .btn {
+  border: none;
+  color: #1A192E;
+  border-radius: 6px;
+  background-color: #F9C041;
+  padding: 16px 50px;
+  font-size: 20px;
+  cursor: pointer;
+}
+#footer .col .col-btn .btn a {
+  text-decoration: none;
+}
+#footer .col .col-heading {
+  padding-top: 50px;
+}
+#footer .col .col-heading a {
+  text-decoration: none;
+}
+#footer .col .col-heading h4 {
+  color: #F9C041;
+  padding: 10px;
+  cursor: pointer;
+}
+#footer .line {
+  background-color: #F9C041;
+  height: 1.5px;
+  width: 70%;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.copyright {
+  background-color: #1A192E;
+  display: flex;
+  text-align: center;
+  padding: 20px;
+  justify-content: space-evenly;
+}
+.copyright .p1 {
+  color: #F9C041;
+  padding-top: 15px;
+}
+.copyright .p2 {
+  color: #F9C041;
+  padding-top: 15px;
+}
+
+@media (max-width: 1305px) {
+  #footer {
+    display: block;
+  }
+  #footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-top: 40px;
+  }
+  #footer .col .col-container {
+    padding-left: 0;
+  }
+  #footer .line {
+    margin-inline: auto;
+  }
+}/*# sourceMappingURL=footer.css.map */
