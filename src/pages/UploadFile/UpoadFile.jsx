@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react';
 import { useState } from 'react';
 import { Navigate,useNavigate } from 'react-router-dom';
 import { fileUpload } from '../../api/api.file';
@@ -11,8 +12,13 @@ const UpoadFile = () => {
   const [department,setDepartment] = useState("");
   const [subject,setSubject] = useState("");
   const [file,setFile] = useState("")
+  const [filename,setFilename] = useState("")
   const navigate = useNavigate()
 
+  // useEffect(()= >{
+
+  // },[filename])
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,6 +43,7 @@ const UpoadFile = () => {
   const handleupload = (e) => {
 
     const File = e.target.files[0]
+    setFilename(File.name)
     console.log(File)
     
     const render = new FileReader()
@@ -45,6 +52,11 @@ const UpoadFile = () => {
       setFile(render.result)
     }
     console.log(file)
+  }
+  
+  const handlefileExplore = (e) => {
+    e.preventDefault()
+    document.getElementById("fileupload-btn").click()
   }
   
   return (
@@ -132,19 +144,28 @@ const UpoadFile = () => {
             {/* <div className="underline"></div> */}
           </li>
           <li>
-            <input type="submit" value="Submit" />
+            <button type="submit" value="Submit" className='font-semibold text-black bg-yellowtheme font-nunito w-max px-14 py-5 rounded-xl text-2xl'>Submit</button>
           </li>
         </ul>
       <div className="drag-area">
         <div className="icon"><i className="fas fa-cloud-upload-alt"></i></div>
         <header>Drag & Drop to Upload File</header>
         <span>OR</span>
-        <button>Browse File</button>
+        <button onClick={handlefileExplore}>Browse File</button>
         <input 
+        id='fileupload-btn'
         type="file" 
         name="fileupload"
         onChange={handleupload}
+        hidden
          />
+      {filename && <div className='flex gap-4 justify-center items-center text-xl font-semibold font-nunito text-black p-4 py-5 px-10 bg-green-200 mt-5 rounded-lg text-center'>
+        <i className="fa-solid fa-square-xmark text-4xl cursor-pointer text-red-600" onClick={(e) => {
+          setFilename("")
+          setFile("")
+        }}></i>
+        {filename}
+        </div>}
       </div>
       </form>
       {/* <div className="drag-area">

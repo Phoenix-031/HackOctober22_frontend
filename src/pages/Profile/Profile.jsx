@@ -43,7 +43,7 @@ const Profile = () => {
         setPass("")
         setCpass("")
       } else {
-        alert("Username changed failed")
+        alert(response.data.msg)
         setPass("")
         setCpass("")
       }
