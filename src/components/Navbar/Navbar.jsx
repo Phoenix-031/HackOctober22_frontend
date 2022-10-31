@@ -15,11 +15,11 @@ const Navbar = () => {
 
   useEffect(() => {
     const getuser = async () => {
-      if(localStorage.getItem("user" !== null)) {
+      // if(localStorage.getItem("user" !== null)) {
       const response = await getUser()
       // console.log(response)
       setProfileurl(response.data.userinfo.profilePic)
-      }
+      // }
     }
 
     getuser()
