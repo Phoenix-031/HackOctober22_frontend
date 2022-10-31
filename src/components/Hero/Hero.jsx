@@ -6,20 +6,53 @@ const Hero = () => {
     <>
     <section id="hero">
       <div className="hero-img">
-        <img src={banner} alt="" className='object-cover'/>
-        <div className="hero-heading flex flex-col justify-center items-center w-full">
+        <img src={banner} alt="" />
+        <div className="hero-heading">
           <h1>An Investment in Knowledge Pays the Best Interest</h1>
-          <div className="wrap flex justify-center items-center">
-            <div className="search max-w-2xl">
-              <input
-                type="text"
-                className="searchTerm"
-                placeholder="What are you looking for?"
-              />
-              <button type="submit" className="searchButton">
-                <i className="fa fa-search"></i>
+          <div className="container">
+            <form action="#">
+              <div className="input-box underline">
+                <input
+                  type="text"
+                  placeholder="Institute Name"
+                  id="getEmail"
+                  required
+                />
+                <div className="underline"></div>
+              </div>
+              <div className="input-box underline">
+                <input
+                  type="text"
+                  placeholder="Department"
+                  id="getPass"
+                  required
+                />
+                <div className="underline"></div>
+              </div>
+              <div className="input-box underline">
+                <input type="text" placeholder="Year" id="getPass" required />
+                <div className="underline"></div>
+              </div>
+              <div className="input-box underline">
+                <input
+                  type="text"
+                  placeholder="Semester"
+                  id="getPass"
+                  required
+                />
+                <div className="underline"></div>
+              </div>
+
+              <button className="input-box button">
+                <input
+                  type="submit"
+                  name=""
+                  value="Submit"
+                  className="btn"
+                  id="button"
+                />
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </div>

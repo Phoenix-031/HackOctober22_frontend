@@ -5,6 +5,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  background-color: #1A192E;
+}
+
 .heading {
   text-align: center;
   padding: 40px;
@@ -22,13 +26,13 @@
   overflow: hidden;
 }
 .hero-img img {
-  opacity: 0.8;
+  opacity: 0.2;
   height: 50%;
   width: 100%;
 }
-.hero-heading {
+.hero-img .hero-heading {
   position: absolute;
-  top: 20%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -38,36 +42,91 @@
   font-size: 40px;
 }
 
-.search {
-  width: 500px;
-  padding: 20px;
-  display: flex;
-}
-
-.searchTerm {
+.container {
+  margin: auto;
+  max-width: 400px;
   width: 100%;
-  border: 3px solid #F9C041;
-  border-right: none;
-  padding: 5px;
-  height: 30px;
-  border-radius: 5px 0 0 5px;
+  padding: 25px 30px;
+  border-radius: 5px;
+}
+
+.container form .input-box {
+  width: 100%;
+  height: 45px;
+  margin-top: 25px;
+  position: relative;
+}
+
+.container form .input-box input {
+  width: 100%;
+  height: 100%;
   outline: none;
-  color: #9DBFAF;
+  font-size: 16px;
+  border: none;
+  background: transparent;
 }
 
-.searchTerm:focus {
-  color: #1A192E;
+.container form .underline::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #ccc;
+  left: 0;
+  bottom: 0;
 }
 
-.searchButton {
-  width: 40px;
-  height: 46px;
-  height:100%;
-  border: 1px solid #F9C041;
-  background: #F9C041;
-  text-align: center;
+.container form .underline::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(to right, #ece457 0%, #F9C041 100%);
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.3s ease;
+}
+
+.container form .input-box input:focus ~ .underline::after,
+.container form .input-box input:valid ~ .underline::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.container form .button {
+  margin: 40px 0 20px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+.container .input-box input[type=submit] {
+  background: linear-gradient(to right, #ece457 0%, #F9C041 100%);
+  font-size: 17px;
   color: #fff;
-  border-radius: 0 5px 5px 0;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.container .input-box input[type=submit]:hover {
+  letter-spacing: 1px;
+  background: linear-gradient(to right, #ece457 0%, #F9C041 100%);
+}
+
+.container .option {
+  font-size: 14px;
+  text-align: center;
+}
+
+.text {
+  text-align: center;
+}
+.text a {
+  text-decoration: none;
+  color: white;
+}
+.text .log {
+  color: #F9C041;
 }/*# sourceMappingURL=hero.css.map */
