@@ -4,7 +4,7 @@ const fileUpload = async (Contributor,Institute,Year,Semester,Department,FilePat
 
     // console.log(FilePath)
     // return (FilePath)
-    const response = await axios.post('https://hidden-harbor-62380.herokuapp.com/api/files/postFiles',{
+    const response = await axios.post('https://jade-unusual-kangaroo.cyclic.app/api/files/postFiles',{
         Contributor,
         Institute,
         Year,
