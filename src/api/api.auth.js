@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const registerUser = async (username, email, password) => {
-  const response = await axios.post("https://jade-unusual-kangaroo.cyclic.app/api/auth/register", {
+  const response = await axios.post("https://spooky-alien-35919.herokuapp.com/api/auth/register", {
     username,
     email,
     password,
@@ -11,7 +11,7 @@ const registerUser = async (username, email, password) => {
 };
 
 const loginUser = async (author, password) => {
-  const response = await axios.post("https://jade-unusual-kangaroo.cyclic.app/api/auth/login", {
+  const response = await axios.post("https://spooky-alien-35919.herokuapp.com/api/auth/login", {
     author,
     password,
   });
@@ -19,7 +19,7 @@ const loginUser = async (author, password) => {
 };
 
 const forgotpassword = async (email) => {
-  const response = await axios.patch("https://jade-unusual-kangaroo.cyclic.app/api/auth/forgotpassword", {
+  const response = await axios.patch("https://spooky-alien-35919.herokuapp.com/api/auth/forgotpassword", {
     email,
   });
 
@@ -27,7 +27,7 @@ const forgotpassword = async (email) => {
 };
 
 const resetpassword = async (password, resetToken) => {
-  const response = await axios.put(`https://jade-unusual-kangaroo.cyclic.app/api/auth/resetpassword/${resetToken}`, {
+  const response = await axios.put(`https://spooky-alien-35919.herokuapp.com/api/auth/resetpassword/${resetToken}`, {
     password,
   });
 
@@ -35,7 +35,7 @@ const resetpassword = async (password, resetToken) => {
 };
 
 const verify = async (token) => {
-  const response = await axios.get(`https://jade-unusual-kangaroo.cyclic.app/api/auth/verify/${token}`);
+  const response = await axios.get(`https://spooky-alien-35919.herokuapp.com/api/auth/verify/${token}`);
 
   return response;
 };
