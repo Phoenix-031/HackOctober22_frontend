@@ -3,7 +3,7 @@ import {React,useState} from 'react'
 import { useNavigate, Link } from "react-router-dom";
 import { loginUser } from '../../api/api.auth';
 import LOGO from '../../assets/HGDRY.png'
-import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const Login = () => {
