@@ -29,6 +29,8 @@ const UpoadFile = () => {
       alert("No file has been uploaded!")
       return;
     } 
+  
+    console.log(contributor,insname,year,semester,department)
 
     const res = await fileUpload(contributor,insname,year,semester,department,file)
     // console.log(res)
@@ -90,7 +92,18 @@ const UpoadFile = () => {
               }}
             />
             <div className="underline"></div>
-            <input
+            <select id="year" className="field-style field-split align-left ml-2" required 
+              onChange={(e) => {
+                setYear(e.target.value);
+              }}
+            >
+              <option value="year">Year</option>
+              <option value="1">First Year</option>
+              <option value="2">Second Year</option>
+              <option value="3">Third Year</option>
+              <option value="4">Fourth Year</option>
+            </select>
+            {/* <input
               type="number"
               name="field2"
               className="field-style field-split align-right"
@@ -100,11 +113,27 @@ const UpoadFile = () => {
               onChange={(e) => {
                 setYear(e.target.value);
               }}
-            />
+            /> */}
             <div className="underline"></div>
           </li>
           <li>
-            <input
+            <select id="semester" className="field-style field-split align-left" required 
+              onChange={(e) => {
+                setSemester(e.target.value);
+              }}
+            >
+              <option value="semester">Semester</option>
+              <option value="1">first</option>
+              <option value="2">second</option>
+              <option value="3">third</option>
+              <option value="4">fourth</option>
+              <option value="5">fifth</option>
+              <option value="6">sixth</option>
+              <option value="7">seventh</option>
+              <option value="8">eighth</option>«
+            </select>
+            <div className="underline"></div>
+            {/* <input
               type="number"
               name="field3"
               className="field-style field-split align-left"
@@ -114,12 +143,11 @@ const UpoadFile = () => {
               onChange={(e) => {
                 setSemester(e.target.value);
               }}
-            />
-            <div className="underline"></div>
+            /> */}
             <input
             type="text"
               name="field4"
-              className="field-style field-split align-right"
+              className="field-style field-split align-right -mt-14"
               placeholder="Department"
               required
               value={department}
