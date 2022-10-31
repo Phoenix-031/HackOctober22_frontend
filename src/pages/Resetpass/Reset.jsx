@@ -17,7 +17,7 @@ const Reset = () => {
 
     const response = await resetpassword(password, urlparams.resetToken);
     if (response.data.success) {
-      // alert(response.data.msg);
+      alert(response.data.msg);
       navigate("/login");
     }
   };

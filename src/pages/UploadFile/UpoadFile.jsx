@@ -25,9 +25,15 @@ const UpoadFile = () => {
     const contributor = "debayan"
     // console.log(file)
 
+    if(!file) {
+      alert("No file has been uploaded!")
+      return;
+    } 
+
     const res = await fileUpload(contributor,insname,year,semester,department,file)
     // console.log(res)
     if(res.data.success){
+      alert("Thankyou for your contribution!")
       setInsname("")
       setYear("")
       setDepartment("")
@@ -36,6 +42,8 @@ const UpoadFile = () => {
       setFile("")
 
       navigate('/')
+    } else {
+      alert(res.data.error)
     }
     
   }
