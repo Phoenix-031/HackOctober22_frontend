@@ -19,12 +19,11 @@ const Login = () => {
   const res = await loginUser(email, password);
   if (res.data.success) {
     localStorage.setItem("user",res.data.accessToken)
-    // console.log(res.data)
-    // toast.error("something went wrong")
     navigate("/");
   } else {
     // toast.error("something went wrong")
-    alert("something went wrong");
+    // console.log(res.data);
+    alert(res.data.error);
   }
 
   // try {

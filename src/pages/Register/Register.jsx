@@ -17,7 +17,12 @@ const Register = () => {
     const res = await registerUser(username, email, password);
     console.log(res);
     if (res.data.success) {
+      alert("Please verify your email before logging in")
       navigate("/login");
+    } else {
+      alert(res.data.msg)
+      setUsername("")
+      setEmail("")
     }
   };
 
