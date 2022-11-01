@@ -4,7 +4,7 @@ import Courses from '../../components/Courses/Courses'
 import Footer from '../../components/Footer/Footer'
 import Hero from '../../components/Hero/Hero'
 import Navbar from '../../components/Navbar/Navbar'
-import About from '../../components/About/About'
+// import About from '../../components/About/About'
 
 const Home = () => {
     // const navigate = useNavigate()
