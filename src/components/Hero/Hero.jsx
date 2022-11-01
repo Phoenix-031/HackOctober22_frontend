@@ -2,6 +2,7 @@ import {React,useState} from 'react'
 import banner from '../../assets/school-work-851328.jpg'
 import './hero.css'
 import { useNavigate } from 'react-router-dom'
+import { filterItems } from '../../api/api.filter'
 
 const Hero = () => {
 
@@ -14,9 +15,18 @@ const Hero = () => {
   const navigate = useNavigate()
 
   const handleSearch = async(e) => {
-    // e.preventDefault()
-    navigate('/search')
-    console.log(insname,year,semester,department)
+    e.preventDefault()
+    if(insname === "" && year ==="" && semester === "" && department === "") {
+      alert("All fields are empty")
+    }
+    else {
+          console.log(insname,year,semester,department)
+         const result =await filterItems(insname,year,semester,department)
+         localStorage.setItem("files",JSON.stringify(result))
+         navigate('/search')
+          // console.log(result)
+    }
+
     
     // const result =
 
@@ -46,7 +56,7 @@ const Hero = () => {
                     setInsname(e.target.value)
                   }}
                 >
-                  <option value="Institute">Institute</option>
+                  <option value="">Institute</option>
                   <option value="MAKAUT">MAKAUT</option>
                   <option value="JU">JU</option>
                   <option value="KIIT">KIIT</option>
@@ -71,7 +81,7 @@ const Hero = () => {
                     setDepartment(e.target.value)
                   }}
                 >
-                  <option value="Department">Department</option>
+                  <option value="">Department</option>
                   <option value="CSE">CSE</option>
                   <option value="IT">IT</option>
                   <option value="ECE">ECE</option>
@@ -93,7 +103,7 @@ const Hero = () => {
                     setYear(e.target.value)
                   }}
                 >
-                  <option value="YEAR">Year</option>
+                  <option value="">Year</option>
                   <option value="2021">2021</option>
                   <option value="2020">2020</option>
                   <option value="2019">2019</option>
@@ -116,7 +126,7 @@ const Hero = () => {
                     setSemester(e.target.value)
                   }}
                 >
-                  <option className='option-bruh' value="Semester">Semester</option>
+                  <option className='option-bruh' value="">Semester</option>
                   <option className='option-bruh' value="1">First</option>
                   <option className='option-bruh' value="2">Second</option>
                   <option className='option-bruh' value="3">Third</option>

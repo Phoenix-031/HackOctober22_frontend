@@ -1,10 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useEffect } from 'react'
+import Card from '../../components/Card/Card'
 import './SearchPage.css'
 
 const Search = () => {
+
+  const [fileitems,setFiles] = useState("")
+
+  const populatelocal = () => {
+    const files = JSON.parse(localStorage.getItem("files"))
+     if(files) {
+      setFiles(files.data.files)
+     }
+    // console.log(files.data.files)
+  }
+
+  useEffect(() => {
+    populatelocal()
+    console.log(fileitems)
+    console.log(fileitems)
+  },[])
+  
   return (
     <>
-    <header className="header-search">
+    <div className='topsection'>
+      <header className="header-search">
       <nav className="navbar">
         <a href="/" className="nav-logo">QBank</a>
       </nav>
@@ -38,6 +58,14 @@ const Search = () => {
         </button>
       </div>
       <div id="products"></div>
+    </div>
+    </div>
+    <div>
+      {
+        fileitems && fileitems.map((file,index) => (
+          <a href = {file.url} target= 'blank'><Card filedata = {file} key = {index}/></a>
+        ))
+      }
     </div>
     </>
   )
