@@ -19,6 +19,7 @@ const Search = () => {
     populatelocal()
     console.log(fileitems)
     console.log(fileitems)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
   
   return (
