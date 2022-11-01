@@ -99,10 +99,10 @@ const UpoadFile = () => {
               }}
             >
               <option value="year">Year</option>
-              <option value="1">First Year</option>
-              <option value="2">Second Year</option>
-              <option value="3">Third Year</option>
-              <option value="4">Fourth Year</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
             </select>
             {/* <input
               type="number"
