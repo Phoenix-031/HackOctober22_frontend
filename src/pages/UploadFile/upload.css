@@ -6,12 +6,13 @@
   font-family: "Poppins", sans-serif;
 }
 
-body {
+/* body {
+  display:flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   background: #1A192E;
-}
+} */
 
 ::-moz-selection {
   background: #F9C041;
@@ -204,4 +205,4 @@ a {
   border-radius: 5px;
   padding: 8px 18px;
   text-decoration: none;
-}/*# sourceMappingURL=Page2.css.map */
+}

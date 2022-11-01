@@ -13,6 +13,7 @@ module.exports = {
       spacing: {
         w1: '400px',
         b1: '700px',
+        uploadw:'1000px',
         profile:'200px'
       }
     },

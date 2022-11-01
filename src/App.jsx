@@ -11,9 +11,9 @@ import './components/Navbar/nav.css'
 import './components/Footer/footer.css'
 // import  './components/Hero/hero.css'
 import './components/Courses/course.css'
-import './pages/UploadFile/upload.css'
+// import './pages/UploadFile/upload.css'
 import './dist/style.css'
-import './components/About/About.css'
+// import './components/About/About.css'
 import VerifyUser from './pages/Verify/Verifyuser';
 import UpoadFile from './pages/UploadFile/UpoadFile';
 import { useEffect } from 'react';

@@ -7,13 +7,14 @@
   font-family: "Poppins", sans-serif;
 }
 
-html, body {
+/* html, body {
   display: grid;
   height: 100vh;
   width: 100%;
   place-items: center;
   background: #1A192E;
-}
+} */
+
 
 ::-moz-selection {
   background: #F9C041;

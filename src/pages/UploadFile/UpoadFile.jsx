@@ -3,6 +3,7 @@ import React from 'react'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { fileUpload } from '../../api/api.file';
+import './upload.css'
 
 const UpoadFile = () => {
 
@@ -116,7 +117,7 @@ const UpoadFile = () => {
             /> */}
             <div className="underline"></div>
           </li>
-          <li>
+          <li className='flex justify-center items-center gap-4'>
             <select id="semester" className="field-style field-split align-left" required 
               onChange={(e) => {
                 setSemester(e.target.value);
@@ -155,7 +156,7 @@ const UpoadFile = () => {
                 setDepartment(e.target.value);
               }}
             />
-            <div className="underline"></div>
+            {/* <div className="underline"></div> */}
           </li>
           <li>
             <input
@@ -177,7 +178,7 @@ const UpoadFile = () => {
               className="field-style"
               placeholder="Message"
             ></textarea>
-            {/* <div className="underline"></div> */}
+            <div className="underline"></div>
           </li>
           <li>
             <button type="submit" value="Submit" className='font-semibold text-black bg-yellowtheme font-nunito w-max px-14 py-5 rounded-xl text-2xl'>Submit</button>
@@ -204,13 +205,6 @@ const UpoadFile = () => {
         </div>}
       </div>
       </form>
-      {/* <div className="drag-area">
-        <div className="icon"><i className="fas fa-cloud-upload-alt"></i></div>
-        <header>Drag & Drop to Upload File</header>
-        <span>OR</span>
-        <button>Browse File</button>
-        <input type="file" hidden />
-      </div> */}
     </div>
     </>
   )

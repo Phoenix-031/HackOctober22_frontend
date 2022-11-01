@@ -29,12 +29,12 @@ const Register = () => {
     
     
   return (
-    
-    <div className="container flex justify-center items-center flex-col w-w1">
+    <div className='border-white border-2'>
+      <div className="container flex justify-center items-center flex-col w-w1">
         <div>
             <img src={LOGO} alt="weblogo" className='object-cover w-70 h-60 -mt-10 -mb-10' />
         </div>
-      <form action="#" onSubmit={handleSubmit} className='w-full px-10'>
+       <form action="#" onSubmit={handleSubmit} className=' px-10'>
         <div className="title">SignUp</div>
         <div className="input-box underline">
           <input type="text" placeholder="Username" id="getName" required 
@@ -68,10 +68,11 @@ const Register = () => {
         <div className="input-box button">
             <button type='Submit' className='flex justify-center items-center w-full h-max p-4 bg-yellowtheme font-serif rounded-xl text-xl font-semibold'>Register</button>
         </div>
-      </form>
-      <div className="text">
+       </form>
+       <div className="text">
         <span className='text-xl font-semibold text-white'>Already have an account? <Link to='/login' className='log font-semibold text-xl'>Log in</Link></span>
       </div>
+    </div>
     </div>
   )
 }
