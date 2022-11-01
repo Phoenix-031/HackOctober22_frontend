@@ -14,7 +14,8 @@ const Hero = () => {
   const navigate = useNavigate()
 
   const handleSearch = async(e) => {
-    e.preventDefault()
+    // e.preventDefault()
+    navigate('/search')
     
     // const result =
 
