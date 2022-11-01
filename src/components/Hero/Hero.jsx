@@ -47,7 +47,7 @@ const Hero = () => {
                   }}
                 >
                   <option value="Institute">Institute</option>
-                  <option value="KGEC">KGEC</option>
+                  <option value="MAKAUT">MAKAUT</option>
                   <option value="JU">JU</option>
                   <option value="KIIT">KIIT</option>
                   <option value="MU">MU</option>
