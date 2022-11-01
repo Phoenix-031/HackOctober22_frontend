@@ -57,7 +57,7 @@ const Register = () => {
           <div className="underline"></div>
         </div>
         <div className="input-box underline">
-          <input type="text" placeholder="Password" id="getEmail" required
+          <input type="text" placeholder="Password" id="getPassword" required
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           className="pl-4 font-normal rounded-xl font-nunito"
