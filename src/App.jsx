@@ -7,12 +7,12 @@ import Register from './pages/Register/Register';
 import Reset from './pages/Resetpass/Reset';
 import './pages/Login/Login.css'
 import './pages/Register/Register.css'
-import './dist/style.css'
 import './components/Navbar/nav.css'
 import './components/Footer/footer.css'
 import  './components/Hero/hero.css'
 import './components/Courses/course.css'
-import './pages/UploadFile/Page2.css'
+import './pages/UploadFile/upload.css'
+import './dist/style.css'
 import './components/About/About.css'
 import VerifyUser from './pages/Verify/Verifyuser';
 import UpoadFile from './pages/UploadFile/UpoadFile';
