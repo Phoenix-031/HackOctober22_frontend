@@ -117,7 +117,7 @@ const UpoadFile = () => {
             /> */}
             <div className="underline"></div>
           </li>
-          <li className='flex justify-center items-center gap-4'>
+          <li className='flex justify-between items-center flex-col'>
             <select id="semester" className="field-style field-split align-left rounded-lg" required 
               onChange={(e) => {
                 setSemester(e.target.value);
@@ -133,7 +133,7 @@ const UpoadFile = () => {
               <option value="7">seventh</option>
               <option value="8">eighth</option>«
             </select>
-            <div className="underline"></div>
+            {/* <div className="underline"></div> */}
             {/* <input
               type="number"
               name="field3"
@@ -145,7 +145,7 @@ const UpoadFile = () => {
                 setSemester(e.target.value);
               }}
             /> */}
-            <input
+            {/* <input
             type="text"
               name="field4"
               className="field-style field-split align-right -mt-14 rounded-lg"
@@ -155,7 +155,21 @@ const UpoadFile = () => {
               onChange={(e) => {
                 setDepartment(e.target.value);
               }}
-            />
+            /> */}
+
+            <select name="field4" 
+               className="field-style field-split align-right ml-2 rounded-lg"
+                  onChange={(e)=>{
+                    setDepartment(e.target.value)
+                  }}
+                >
+                  <option value="Department">Department</option>
+                  <option value="CSE">CSE</option>
+                  <option value="IT">IT</option>
+                  <option value="ECE">ECE</option>
+                  <option value="ME">ME</option>
+            </select>
+            
             {/* <div className="underline"></div> */}
           </li>
           <li>

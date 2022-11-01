@@ -135,6 +135,7 @@ a {
   display: block;
   margin-bottom: 10px;
   min-height: 35px;
+  /* width:100%; */
 }
 
 .form-style-9 ul li .field-style {
