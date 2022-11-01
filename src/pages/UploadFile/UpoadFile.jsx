@@ -77,7 +77,7 @@ const UpoadFile = () => {
         <a href="/" className="nav-logo">Upload Files</a>
       </nav>
     </header>
-    <div className="container w-full">
+    <div className="container-upload w-full">
       <form className="form-style-9 flex gap-4 justify-center items-center w-full" onSubmit={handleSubmit}>
         <ul>
           <li>

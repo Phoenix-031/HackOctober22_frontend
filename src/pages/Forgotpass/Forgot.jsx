@@ -19,7 +19,8 @@ const Forgot = () => {
   };
     
   return (
-    <div className="container flex justify-center items-center flex-col">
+    <div className='flex justify-center items-center'>
+      <div className="container flex justify-center items-center flex-col">
         <div>
             <img src={LOGO} alt="weblogo" className='object-cover w-70 h-60 -mt-10 -mb-10' />
         </div>
@@ -50,6 +51,7 @@ const Forgot = () => {
           </Link>
         </span>
       </form>
+    </div>
     </div>
   )
 }

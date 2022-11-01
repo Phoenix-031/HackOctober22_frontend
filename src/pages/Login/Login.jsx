@@ -39,11 +39,12 @@ const Login = () => {
   
   
   return (
-    <div className="container flex justify-center items-center flex-col w-w1">
+    <div className='flex justify-center items-center'>
+      <div className="container flex justify-center items-center flex-col w-full">
         <div>
-            <img src={LOGO} alt="weblogo" className='object-cover w-70 h-60 -mt-10 -mb-10' />
+            <img src={LOGO} alt="weblogo" className='object-cover w-60 h-60 -mt-10 -mb-10' />
         </div>
-      <form action="#" onSubmit={handleLogin} className='w-full px-10 flex flex-col'>
+      <form action="#" onSubmit={handleLogin} className='w-w1 px-10 flex flex-col'>
         <div className="title">Login</div>
         <div className="input-box underline">
           <input
@@ -93,6 +94,7 @@ const Login = () => {
             Create an account
           </Link>
         </span>
+    </div>
     </div>
   )
 }

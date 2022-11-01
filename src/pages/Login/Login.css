@@ -30,7 +30,7 @@
   width: 100%;
   padding: 25px 30px;
   border-radius: 5px;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
+  /* box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15); */
 }
 
 .container form .title {
@@ -171,4 +171,4 @@
 .container .facebook a:hover {
   background: linear-gradient(to left, #3b5998 0%, #476bb8 100%);
   margin: 20px 0 50px 0;
-}/*# sourceMappingURL=login.css.map */
+}
