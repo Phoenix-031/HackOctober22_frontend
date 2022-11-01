@@ -9,25 +9,25 @@ body {
   background-color: #1A192E;
 }
 
-.heading h1 {
+.heading-course h1 {
   text-align: center;
   padding: 20px 50px;
   font-size: 40px;
   color: #F9C041;
 }
 
-.main {
+.main-course {
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-.main .card {
+.main-course .card-course {
   width: 30%;
   padding: 20px;
 }
-.main img {
+.main-course img {
   border-radius: 5px;
   width: 400px;
 }

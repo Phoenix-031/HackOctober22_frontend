@@ -5,12 +5,12 @@ const Courses = () => {
   return (
     <>
     <section id="courses">
-    <div className="heading">
+    <div className="heading-course">
       <h1 className='heading'>Recent Papers</h1>
     </div>
 
-    <div className='main'>
-      <div className="card">
+    <div className='main-course'>
+      <div className="card-course">
         <div className="course-img">
           <img src={bannerpic} alt="" />
         </div>
@@ -26,7 +26,7 @@ const Courses = () => {
         </div>
       </div>
 
-            <div className="card">
+      <div className="card-course">
         <div className="course-img">
           <img src={bannerpic} alt="" />
         </div>
@@ -42,7 +42,7 @@ const Courses = () => {
         </div>
       </div>
 
-            <div className="card">
+      <div className="card-course">
         <div className="course-img">
           <img src={bannerpic} alt="" />
         </div>
@@ -58,7 +58,7 @@ const Courses = () => {
         </div>
       </div>
 
-            <div className="card">
+      <div className="card-course">
         <div className="course-img">
           <img src={bannerpic} alt="" />
         </div>
@@ -74,7 +74,7 @@ const Courses = () => {
         </div>
       </div>
 
-            <div className="card">
+      <div className="card-course">
         <div className="course-img">
           <img src={bannerpic} alt="" />
         </div>
@@ -90,12 +90,12 @@ const Courses = () => {
         </div>
       </div>
 
-            <div className="card">
+            <div className="card-course">
         <div className="course-img">
           <img src={bannerpic} alt="" />
         </div>
         <div className="info">
-          <h1>Heading</h1>
+          <h3>Heading</h3>
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum porro
             molestias odio. Quaerat, et magnam.
@@ -106,6 +106,8 @@ const Courses = () => {
         </div>
       </div>
     </div>
+
+
     </section>
     </>
   )

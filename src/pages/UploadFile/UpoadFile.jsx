@@ -189,7 +189,7 @@ const UpoadFile = () => {
         <header>Drag & Drop to Upload File</header>
         <span>OR</span>
         <button onClick={handlefileExplore}>Browse File</button>
-        <inp 
+        <input 
         id='fileupload-btn'
         type="file" 
         name="fileupload"
