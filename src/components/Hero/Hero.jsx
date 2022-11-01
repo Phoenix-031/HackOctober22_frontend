@@ -1,5 +1,6 @@
 import React from 'react'
 import banner from '../../assets/education.jpg'
+import './hero.css'
 
 const Hero = () => {
   return (
@@ -10,7 +11,7 @@ const Hero = () => {
         <div className="hero-heading">
           <h1>An Investment in Knowledge Pays the Best Interest</h1>
           <div className="container">
-            <form action="#">
+            <form>
               <div className="input-box underline">
                 <input
                   type="text"
