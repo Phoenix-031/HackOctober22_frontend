@@ -30,7 +30,7 @@ const Hero = () => {
           <div className="container-hero">
             <form action="#" onSubmit={handleSearch}>
               <div className="input-box underline">
-                <input
+                {/* <input
                   type="text"
                   placeholder="Institute Name"
                   id="getEmail"
@@ -38,11 +38,24 @@ const Hero = () => {
                   onChange={(e)=>{
                     setInsname(e.target.value)
                   }}
-                />
+                /> */}
+                <select name="Institute" id="getPass" 
+                  onChange={(e)=>{
+                    setInsname(e.target.value)
+                  }}
+                >
+                  <option value="Institute">Institute</option>
+                  <option value="KGEC">KGEC</option>
+                  <option value="JU">JU</option>
+                  <option value="KIIT">KIIT</option>
+                  <option value="MU">MU</option>
+                  <option value="HIT">HIT</option>
+                  <option value="DU">DU</option>
+                </select>
                 <div className="underline"></div>
               </div>
               <div className="input-box underline">
-                <input
+                {/* <input
                   type="text"
                   placeholder="Department"
                   id="getPass"
@@ -50,22 +63,44 @@ const Hero = () => {
                   onChange={(e)=>{
                     setDepartment(e.target.value)
                   }}
-                />
+                /> */}
+                <select name="Department" id="getPass" 
+                  onChange={(e)=>{
+                    setDepartment(e.target.value)
+                  }}
+                >
+                  <option value="Department">Department</option>
+                  <option value="CSE">CSE</option>
+                  <option value="IT">IT</option>
+                  <option value="ECE">ECE</option>
+                  <option value="ME">ME</option>
+                </select>
                 <div className="underline"></div>
               </div>
               <div className="input-box underline">
-                <input type="text" 
+                {/* <input type="text" 
                 placeholder="Year" 
                 id="getPass" 
                 required 
                 onChange={(e)=>{
                     setYear(e.target.value)
                 }}
-                />
+                /> */}
+                <select name="Year" id="getPass" 
+                  onChange={(e)=>{
+                    setYear(e.target.value)
+                  }}
+                >
+                  <option value="YEAR">Year</option>
+                  <option value="2021">2021</option>
+                  <option value="2020">2020</option>
+                  <option value="2019">2019</option>
+                  <option value="2018">2018</option>
+                </select>
                 <div className="underline"></div>
               </div>
               <div className="input-box underline">
-                <input
+                {/* <input
                   type="text"
                   placeholder="Semester"
                   id="getPass"
@@ -73,7 +108,22 @@ const Hero = () => {
                   onChange={(e)=>{
                     setSemester(e.target.value)
                   }}
-                />
+                /> */}
+                <select name="Semester" id="getPass" 
+                  onChange={(e)=>{
+                    setDepartment(e.target.value)
+                  }}
+                >
+                  <option className='option-bruh' value="Semester">Semester</option>
+                  <option className='option-bruh' value="1">First</option>
+                  <option className='option-bruh' value="2">Second</option>
+                  <option className='option-bruh' value="3">Third</option>
+                  <option className='option-bruh' value="4">Fourth</option>
+                  <option className='option-bruh' value="5">Fifth</option>
+                  <option className='option-bruh' value="6">Sixth</option>
+                  <option className='option-bruh' value="7">Seventh</option>
+                  <option className='option-bruh' value="8">Eighth</option>
+                </select>
                 <div className="underline"></div>
               </div>
 
