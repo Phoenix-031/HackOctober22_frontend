@@ -25,7 +25,7 @@ a {
 .header {
   background-color: #1A192E;
   border-bottom: 1px solid #E2E8F0;
-  padding: 20px;
+  /* padding: 20px; */
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -34,7 +34,7 @@ a {
   overflow: hidden;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1.5rem;
+  /* padding: 1rem 0.2rem; */
 }
 
 .hamburger {
@@ -43,7 +43,7 @@ a {
 
 .bar {
   display: block;
-  width: 25px;
+  width: 20px;
   height: 3px;
   margin: 5px auto;
   transition: all 0.3s ease-in-out;
@@ -62,7 +62,9 @@ a {
 
 .nav-btn {
   margin-left: 5rem;
-  padding: 10px;
+  /* padding: 10px; */
+  padding:10px 0;
+  width:100px;
   background-color: #F9C041;
   border-radius: 5px;
   cursor: pointer;
