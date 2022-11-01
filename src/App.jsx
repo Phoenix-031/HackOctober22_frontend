@@ -18,6 +18,7 @@ import VerifyUser from './pages/Verify/Verifyuser';
 import UpoadFile from './pages/UploadFile/UpoadFile';
 import { useEffect } from 'react';
 import Profile from './pages/Profile/Profile';
+import Search from './pages/Search/Search';
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
       <Route exact path='/forgotpassword' element={<Forgot />}/>
       <Route exact path='/profile/:profileId' element={user? <Profile /> : <Home/>} />
       <Route exact path='/upload' element={user? <UpoadFile /> : <Home/>} />
+      <Route exact path='/search' element= {<Search />}/>
     </Routes>
     </>
   );

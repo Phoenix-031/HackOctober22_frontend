@@ -78,13 +78,13 @@ const UpoadFile = () => {
       </nav>
     </header>
     <div className="container-upload w-full">
-      <form className="form-style-9 flex gap-4 justify-center items-center w-full" onSubmit={handleSubmit}>
+      <form className="form-style-9 flex gap-6 justify-center items-center w-full" onSubmit={handleSubmit}>
         <ul>
           <li>
             <input
               type="text"
               name="field1"
-              className="field-style field-split align-left"
+              className="field-style field-split align-left rounded-lg"
               placeholder="Institute Name"
               required
               value={insname}
@@ -93,7 +93,7 @@ const UpoadFile = () => {
               }}
             />
             <div className="underline"></div>
-            <select id="year" className="field-style field-split align-left ml-2" required 
+            <select id="year" className="field-style field-split align-left ml-2 rounded-lg" required 
               onChange={(e) => {
                 setYear(e.target.value);
               }}
@@ -118,7 +118,7 @@ const UpoadFile = () => {
             <div className="underline"></div>
           </li>
           <li className='flex justify-center items-center gap-4'>
-            <select id="semester" className="field-style field-split align-left" required 
+            <select id="semester" className="field-style field-split align-left rounded-lg" required 
               onChange={(e) => {
                 setSemester(e.target.value);
               }}
@@ -148,7 +148,7 @@ const UpoadFile = () => {
             <input
             type="text"
               name="field4"
-              className="field-style field-split align-right -mt-14"
+              className="field-style field-split align-right -mt-14 rounded-lg"
               placeholder="Department"
               required
               value={department}
@@ -162,7 +162,7 @@ const UpoadFile = () => {
             <input
               type="text"
               name="field3"
-              className="field-style field-full align-none"
+              className="field-style field-full align-none rounded-lg"
               placeholder="Subject"
               required
               value={subject}
@@ -175,7 +175,7 @@ const UpoadFile = () => {
           <li>
             <textarea
               name="field5"
-              className="field-style"
+              className="field-style rounded-lg"
               placeholder="Message"
             ></textarea>
             <div className="underline"></div>
@@ -189,7 +189,7 @@ const UpoadFile = () => {
         <header>Drag & Drop to Upload File</header>
         <span>OR</span>
         <button onClick={handlefileExplore}>Browse File</button>
-        <input 
+        <inp 
         id='fileupload-btn'
         type="file" 
         name="fileupload"

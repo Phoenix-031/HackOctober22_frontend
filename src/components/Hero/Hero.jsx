@@ -1,8 +1,13 @@
 import React from 'react'
 import banner from '../../assets/school-work-851328.jpg'
 import './hero.css'
+import { useNavigate } from 'react-router-dom'
 
 const Hero = () => {
+
+
+  const navigate = useNavigate()
+  
   return (
     <>
      <section id="hero">
@@ -48,9 +53,12 @@ const Hero = () => {
                 <input
                   type="submit"
                   name=""
-                  value="Submit"
+                  value="Search"
                   className="btn"
                   id="button"
+                  onClick={(e ) =>{
+                    navigate('/search')
+                  }}
                 />
               </button>
             </form>
