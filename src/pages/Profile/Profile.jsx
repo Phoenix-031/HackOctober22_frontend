@@ -96,7 +96,8 @@ const Profile = () => {
       }
     }
   return (
-    <div className='max-w-xl w-w1 shadow-profileshadow rounded-lg'>
+    <div className='w-full flex justify-center items-center'>
+       <div className='max-w-xl w-w1 shadow-profileshadow rounded-lg'>
       <form className='flex flex-col gap-6 justify-center items-center border-white p-10 w-full'>
         <div className='flex flex-col justify-center items-center gap-4'>
           <img src={profileurl} alt="profile" className='w-profile h-profile object-cover rounded-full mb-5'/>
@@ -146,6 +147,7 @@ const Profile = () => {
         <button className='bg-green-500 p-5 rounded-xl font-medium text-xl px-12 hover:opacity-80' onClick={handlePasswordChange}>Update</button>
         </div>
       </form>
+    </div>
     </div>
   )
 }
