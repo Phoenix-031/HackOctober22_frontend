@@ -1,17 +1,17 @@
 import React from 'react'
-import banner from '../../assets/education.jpg'
+import banner from '../../assets/school-work-851328.jpg'
 import './hero.css'
 
 const Hero = () => {
   return (
     <>
-    <section id="hero">
+     <section id="hero">
       <div className="hero-img">
         <img src={banner} alt="" />
         <div className="hero-heading">
           <h1>An Investment in Knowledge Pays the Best Interest</h1>
-          <div className="container">
-            <form>
+          <div className="container-hero">
+            <form action="#">
               <div className="input-box underline">
                 <input
                   type="text"

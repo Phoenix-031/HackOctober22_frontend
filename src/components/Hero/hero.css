@@ -27,22 +27,23 @@ body {
 }
 .hero-img img {
   opacity: 0.2;
-  height: 50%;
+  height: 700px;
   width: 100%;
 }
 .hero-img .hero-heading {
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  /* z-index:100; */
 }
 .hero-img .hero-heading h1 {
   color: #E2E8F0;
   font-size: 40px;
 }
 
-.container {
+.container-hero {
   margin: auto;
   max-width: 400px;
   width: 100%;
@@ -50,23 +51,24 @@ body {
   border-radius: 5px;
 }
 
-.container form .input-box {
+.container-hero form .input-box {
   width: 100%;
   height: 45px;
   margin-top: 25px;
   position: relative;
 }
 
-.container form .input-box input {
+.container-hero form .input-box input {
   width: 100%;
   height: 100%;
   outline: none;
   font-size: 16px;
   border: none;
   background: transparent;
+  color: #F9C041;
 }
 
-.container form .underline::before {
+.container-hero form .underline::before {
   content: "";
   position: absolute;
   height: 2px;
@@ -76,7 +78,7 @@ body {
   bottom: 0;
 }
 
-.container form .underline::after {
+.container-hero form .underline::after {
   content: "";
   position: absolute;
   height: 2px;
@@ -89,19 +91,19 @@ body {
   transition: all 0.3s ease;
 }
 
-.container form .input-box input:focus ~ .underline::after,
-.container form .input-box input:valid ~ .underline::after {
+.container-hero form .input-box input:focus ~ .underline::after,
+.container-hero form .input-box input:valid ~ .underline::after {
   transform: scaleX(1);
   transform-origin: left;
 }
 
-.container form .button {
+.container-hero form .button {
   margin: 40px 0 20px 0;
   border: none;
   border-radius: 5px;
 }
 
-.container .input-box input[type=submit] {
+.container-hero .input-box input[type=submit] {
   background: linear-gradient(to right, #ece457 0%, #F9C041 100%);
   font-size: 17px;
   color: #fff;
@@ -110,12 +112,12 @@ body {
   transition: all 0.3s ease;
 }
 
-.container .input-box input[type=submit]:hover {
+.container-hero .input-box input[type=submit]:hover {
   letter-spacing: 1px;
   background: linear-gradient(to right, #ece457 0%, #F9C041 100%);
 }
 
-.container .option {
+.container-hero .option {
   font-size: 14px;
   text-align: center;
 }
@@ -129,4 +131,4 @@ body {
 }
 .text .log {
   color: #F9C041;
-}/*# sourceMappingURL=hero.css.map */
+}
