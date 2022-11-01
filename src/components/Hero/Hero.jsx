@@ -16,6 +16,7 @@ const Hero = () => {
   const handleSearch = async(e) => {
     // e.preventDefault()
     navigate('/search')
+    console.log(insname,year,semester,department)
     
     // const result =
 
@@ -112,7 +113,7 @@ const Hero = () => {
                 /> */}
                 <select name="Semester" id="getPass" 
                   onChange={(e)=>{
-                    setDepartment(e.target.value)
+                    setSemester(e.target.value)
                   }}
                 >
                   <option className='option-bruh' value="Semester">Semester</option>
