@@ -3,6 +3,7 @@ import {React,useState} from 'react'
 import { useNavigate,Link } from 'react-router-dom';
 import { registerUser } from '../../api/api.auth';
 import LOGO from '../../assets/HGDRY.png'
+import swal from 'sweetalert'
 
 
 const Register = () => {
@@ -17,10 +18,10 @@ const Register = () => {
     const res = await registerUser(username, email, password);
     console.log(res);
     if (res.data.success) {
-      alert("Please verify your email before logging in")
+      swal("Please verify your email before logging in")
       navigate("/login");
     } else {
-      alert(res.data.msg)
+      swal(res.data.msg)
       setUsername("")
       setEmail("")
     }

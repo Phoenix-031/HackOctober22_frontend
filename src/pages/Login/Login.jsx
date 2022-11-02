@@ -3,6 +3,7 @@ import {React,useState} from 'react'
 import { useNavigate, Link } from "react-router-dom";
 import { loginUser } from '../../api/api.auth';
 import LOGO from '../../assets/HGDRY.png'
+import swal from 'sweetalert'
 
 
 
@@ -23,7 +24,7 @@ const Login = () => {
   } else {
     // toast.error("something went wrong")
     // console.log(res.data);
-    alert(res.data.error);
+    swal(res.data.error);
   }
 
   // try {

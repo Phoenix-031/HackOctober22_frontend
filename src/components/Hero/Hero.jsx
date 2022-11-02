@@ -3,6 +3,7 @@ import banner from '../../assets/school-work-851328.jpg'
 import './hero.css'
 import { useNavigate } from 'react-router-dom'
 import { filterItems } from '../../api/api.filter'
+import swal from 'sweetalert'
 
 const Hero = () => {
 
@@ -17,7 +18,7 @@ const Hero = () => {
   const handleSearch = async(e) => {
     e.preventDefault()
     if(insname === "" && year ==="" && semester === "" && department === "") {
-      alert("All fields are empty")
+      swal("All fields are empty")
     }
     else {
           console.log(insname,year,semester,department)

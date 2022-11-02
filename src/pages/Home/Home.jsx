@@ -13,7 +13,6 @@ const Home = () => {
     <>
       <Navbar />
       <Hero />
-      {/* <About /> */}
       <Courses />
       <Footer />
     </>

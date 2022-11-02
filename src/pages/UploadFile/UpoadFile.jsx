@@ -2,6 +2,7 @@ import React from 'react'
 // import { useEffect } from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import swal from 'sweetalert';
 import { fileUpload } from '../../api/api.file';
 import './upload.css'
 
@@ -27,7 +28,7 @@ const UpoadFile = () => {
     // console.log(file)
 
     if(!file) {
-      alert("No file has been uploaded!")
+      swal("No file has been uploaded!")
       return;
     } 
   
@@ -36,7 +37,7 @@ const UpoadFile = () => {
     const res = await fileUpload(contributor,insname,year,semester,department,file)
     // console.log(res)
     if(res.data.success){
-      alert("Thankyou for your contribution!")
+      swal("Thankyou for your contribution!")
       setInsname("")
       setYear("")
       setDepartment("")
@@ -46,7 +47,7 @@ const UpoadFile = () => {
 
       navigate('/')
     } else {
-      alert(res.data.error)
+      swal(res.data.error)
     }
     
   }
@@ -104,17 +105,6 @@ const UpoadFile = () => {
               <option value="2019">2019</option>
               <option value="2018">2018</option>
             </select>
-            {/* <input
-              type="number"
-              name="field2"
-              className="field-style field-split align-right"
-              placeholder="Year"
-              required
-              value={year}
-              onChange={(e) => {
-                setYear(e.target.value);
-              }}
-            /> */}
             <div className="underline"></div>
           </li>
           <li className='flex justify-between items-center flex-col'>
@@ -133,29 +123,6 @@ const UpoadFile = () => {
               <option value="7">seventh</option>
               <option value="8">eighth</option>«
             </select>
-            {/* <div className="underline"></div> */}
-            {/* <input
-              type="number"
-              name="field3"
-              className="field-style field-split align-left"
-              placeholder="Semester"
-              required
-              value={semester}
-              onChange={(e) => {
-                setSemester(e.target.value);
-              }}
-            /> */}
-            {/* <input
-            type="text"
-              name="field4"
-              className="field-style field-split align-right -mt-14 rounded-lg"
-              placeholder="Department"
-              required
-              value={department}
-              onChange={(e) => {
-                setDepartment(e.target.value);
-              }}
-            /> */}
 
             <select name="field4" 
                className="field-style field-split align-right ml-2 rounded-lg"

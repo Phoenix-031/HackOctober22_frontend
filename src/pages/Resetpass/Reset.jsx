@@ -2,6 +2,7 @@ import {React,useState} from 'react'
 import { useNavigate ,useParams} from 'react-router-dom';
 import { resetpassword } from '../../api/api.auth';
 import LOGO from '../../assets/HGDRY.png'
+import swal from 'sweetalert';
 
 const Reset = () => {
 
@@ -17,7 +18,7 @@ const Reset = () => {
 
     const response = await resetpassword(password, urlparams.resetToken);
     if (response.data.success) {
-      alert(response.data.msg);
+      swal(response.data.msg);
       navigate("/login");
     }
   };

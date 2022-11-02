@@ -2,6 +2,7 @@ import {React,useState} from 'react'
 import { useNavigate,Link } from 'react-router-dom';
 import { forgotpassword } from '../../api/api.auth';
 import LOGO from '../../assets/HGDRY.png'
+import swal from 'sweetalert';
 
 const Forgot = () => {
 
@@ -13,7 +14,7 @@ const Forgot = () => {
     const res = await forgotpassword(email);
 
     if (res.data.success) {
-      alert(res.data.data);
+      swal(res.data.data);
       navigate("/login");
     }
   };

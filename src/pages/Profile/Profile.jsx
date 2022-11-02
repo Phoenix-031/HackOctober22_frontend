@@ -1,6 +1,6 @@
 import {React,useEffect,useState} from 'react'
 import { changeEmail, changeProfilePassword, changeUsername, getUser, updateProfilePic } from '../../api/api.user'
-
+import swal from 'sweetalert'
 
 const Profile = () => {
 
@@ -48,18 +48,18 @@ const Profile = () => {
     
     // if(!pass)
     if(pass !== cpass) {
-      alert("Passwords don't match")
+      swal("Passwords don't match")
       setPass("")
       setCpass("")
     } else {
       const response = await changeProfilePassword(pass)
 
       if(response.data.success) {
-        alert("Password changed successfully")
+        swal("Password changed successfully")
         setPass("")
         setCpass("")
       } else {
-        alert("Password changed failed")
+        swal("Password changed failed")
         setPass("")
         setCpass("")
       }
@@ -74,10 +74,10 @@ const Profile = () => {
     console.log(response)
 
       if(response.data.success) {
-        alert("Username changed successfully")
+        swal("Username changed successfully")
         setUsername("")
       } else {
-        alert(response.data.msg)
+        swal(response.data.msg)
         setUsername("")
       }
     }
@@ -88,10 +88,10 @@ const Profile = () => {
     const response = await changeEmail(email)
 
       if(response.data.success) {
-        alert("Email changed successfully")
+        swal("Email changed successfully")
         setEmail("")
       } else {
-        alert("Email changed failed")
+        swal("Email changed failed")
         setEmail("")
       }
     }
