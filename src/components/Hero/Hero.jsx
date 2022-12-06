@@ -4,6 +4,7 @@ import './hero.css'
 import { useNavigate } from 'react-router-dom'
 import { filterItems } from '../../api/api.filter'
 import swal from 'sweetalert'
+import LoaderComponent from '../LoaderComponent'
 
 const Hero = () => {
 
@@ -12,11 +13,13 @@ const Hero = () => {
   const [year,setYear] = useState("");
   const [semester,setSemester] = useState("");
   const [department,setDepartment] = useState("");
+  const [fetching,setFetching] = useState(false);
   
   const navigate = useNavigate()
 
   const handleSearch = async(e) => {
     e.preventDefault()
+    setFetching(true)
     if(insname === "" && year ==="" && semester === "" && department === "") {
       swal("All fields are empty")
     }
@@ -40,15 +43,6 @@ const Hero = () => {
           <div className="container-hero">
             <form action="#" onSubmit={handleSearch}>
               <div className="input-box underline">
-                {/* <input
-                  type="text"
-                  placeholder="Institute Name"
-                  id="getEmail"
-                  required
-                  onChange={(e)=>{
-                    setInsname(e.target.value)
-                  }}
-                /> */}
                 <select name="Institute" id="getPass" 
                   onChange={(e)=>{
                     setInsname(e.target.value)
@@ -65,15 +59,6 @@ const Hero = () => {
                 <div className="underline"></div>
               </div>
               <div className="input-box underline">
-                {/* <input
-                  type="text"
-                  placeholder="Department"
-                  id="getPass"
-                  required
-                  onChange={(e)=>{
-                    setDepartment(e.target.value)
-                  }}
-                /> */}
                 <select name="Department" id="getPass" 
                   onChange={(e)=>{
                     setDepartment(e.target.value)
@@ -88,14 +73,6 @@ const Hero = () => {
                 <div className="underline"></div>
               </div>
               <div className="input-box underline">
-                {/* <input type="text" 
-                placeholder="Year" 
-                id="getPass" 
-                required 
-                onChange={(e)=>{
-                    setYear(e.target.value)
-                }}
-                /> */}
                 <select name="Year" id="getPass" 
                   onChange={(e)=>{
                     setYear(e.target.value)
@@ -110,15 +87,6 @@ const Hero = () => {
                 <div className="underline"></div>
               </div>
               <div className="input-box underline">
-                {/* <input
-                  type="text"
-                  placeholder="Semester"
-                  id="getPass"
-                  required
-                  onChange={(e)=>{
-                    setSemester(e.target.value)
-                  }}
-                /> */}
                 <select name="Semester" id="getPass" 
                   onChange={(e)=>{
                     setSemester(e.target.value)
@@ -138,13 +106,17 @@ const Hero = () => {
               </div>
 
               <button className="input-box button">
-                <input
+                {
+                  fetching ? (<LoaderComponent />) : (
+                                   <input
                   type="submit"
                   name=""
                   value="Search"
                   className="btn"
                   id="button"
                 />
+                  )
+                }
               </button>
             </form>
           </div>
