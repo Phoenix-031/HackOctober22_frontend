@@ -10,11 +10,15 @@ const Card = (props) => {
     <div className='w-full'>
       <motion.div className='flex flex-col justify-content cursor-pointer items-center p-10 text-yellowtheme border-white border-2 file-card max-content flex-wrap text-2xl'
       initial={{opacity:0,translateX:-200}}
-      animate={{opacity:1,translateX:0}}
+      // animate={{opacity:1,translateX:0}}
+           whileInView={{
+      opacity:1,
+      translateX:0
+     }}
       transition={{
         ease:'easeInOut',
-        duration:0.4,
-        delay:(props.indval) * 0.1,
+        duration:0.3,
+        delay:(props.indval) * 0.05,
         type:'spring',
         stiffness:200
       }}
