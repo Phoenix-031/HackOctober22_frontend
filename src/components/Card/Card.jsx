@@ -8,7 +8,7 @@ const Card = (props) => {
 
   return (
     <div className='w-full'>
-      <motion.div className='flex flex-col justify-content items-center p-10 text-yellowtheme border-white border-2 file-card max-content flex-wrap text-2xl'
+      <motion.div className='flex flex-col justify-content cursor-pointer items-center p-10 text-yellowtheme border-white border-2 file-card max-content flex-wrap text-2xl'
       initial={{opacity:0,translateX:-200}}
       animate={{opacity:1,translateX:0}}
       transition={{

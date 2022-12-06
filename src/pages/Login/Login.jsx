@@ -44,13 +44,15 @@ const Login = () => {
   
   
   return (
-    <div className='flex justify-center items-center'>
-      <div className="container flex justify-center items-center flex-col w-full">
-        <div>
-            <img src={LOGO} alt="weblogo" className='object-cover w-60 h-60 -mt-10 -mb-10' />
+
+  <div className='w-full bg-inherit  h-screen flex justify-center items-center shadow-lg'>
+      <div className=' h-3/4 rounded-2xl flex flex-col gap-4 justify-start items-center'>
+
+       <div>
+            <img src={LOGO} alt="weblogo" className='' />
         </div>
-      <form action="#" onSubmit={handleLogin} className='w-w1 px-10 flex flex-col'>
-        <div className="title">Login</div>
+      <form action="#" onSubmit={handleLogin} className=' px-10 w-w1  h-full flex flex-col gap-6 pt-7'>
+        <div className="text-5xl font-nunito text-yellowtheme font-semibold w-full text-center">Login</div>
         <div className="input-box underline">
           <input
             type="text"
@@ -61,7 +63,7 @@ const Login = () => {
           }}
             id="getEmail"
             required
-            className='pl-2 font-semibold rounded-xl'
+            className="pl-4 w-full h-20 text-xl focus:outline-none font-normal rounded-xl font-nunito"
           />
           <div className="underline"></div>
         </div>
@@ -75,7 +77,7 @@ const Login = () => {
           }}
             id="getPass"
             required
-            className='pl-2 font-semibold rounded-xl'
+            className="pl-4 w-full h-20 text-xl focus:outline-none font-normal rounded-xl font-nunito"
           />
           <div className="underline"></div>
         </div>
@@ -85,7 +87,7 @@ const Login = () => {
         <div className="input-box flex justify-center items-center ">
          {
           login ? (<LoaderComponent />) : (
-             <button type='submit' className='flex justify-center items-center w-full h-max p-4 bg-yellowtheme font-serif font-semibold rounded-xl text-xl'>Log In</button>
+             <button type='submit' className='flex justify-center items-center w-full h-max p-4 py-6 bg-yellowtheme font-serif font-semibold rounded-xl text-xl'>Log In</button>
           )
          }
         </div>
@@ -98,13 +100,20 @@ const Login = () => {
         <a href="/"><i className="fab fa-facebook-f"></i>Sign in With Facebook</a>
       </div> */}
       <span className="text-xl font-semibold text-white input-box">
-          New here?
+          New here? 
           <Link to="/register" className="ml-1 font-semibold text-sky-900 text-xl">
             Create an account
           </Link>
         </span>
+        
+      </div>
     </div>
-    </div>
+    
+    // <div className='flex justify-center items-center'>
+    //   <div className="container flex justify-center items-center flex-col w-full">
+ 
+    // </div>
+    // </div>
   )
 }
 

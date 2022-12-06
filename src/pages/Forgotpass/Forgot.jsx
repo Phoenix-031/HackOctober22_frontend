@@ -20,13 +20,13 @@ const Forgot = () => {
   };
     
   return (
-    <div className='flex justify-center items-center'>
-      <div className="container flex justify-center items-center flex-col">
+    <div className='w-full bg-inherit  h-screen flex justify-center items-center shadow-lg'>
+      <div className=' h-3/4 rounded-2xl flex flex-col gap-4 justify-start items-center'>
         <div>
-            <img src={LOGO} alt="weblogo" className='object-cover w-70 h-60 -mt-10 -mb-10' />
+            <img src={LOGO} alt="weblogo" className='' />
         </div>
-      <form action="#" onSubmit={handleSubmit}>
-        <div className="title">Forgot Password?</div>
+      <form action="#" onSubmit={handleSubmit} className=' px-10 w-w1  h-full flex flex-col gap-6 pt-7'>
+        <div className="text-5xl font-nunito text-yellowtheme font-semibold w-full text-center">Forgot Password?</div>
         <div className="input-box underline">
           <input
             type="text"
@@ -37,7 +37,7 @@ const Forgot = () => {
             setEmail(e.target.value);
           }}
             required
-            className='pl-2 font-normal rounded-xl'
+            className="pl-4 w-full h-20 text-xl focus:outline-none font-normal rounded-xl font-nunito"
           />
           <div className="underline"></div>
         </div>

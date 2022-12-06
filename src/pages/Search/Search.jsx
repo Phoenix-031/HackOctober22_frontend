@@ -61,7 +61,7 @@ const Search = () => {
       <div id="products"></div>
     </div>
     </div>
-    <div className='flex flex-wrap justify-start items-baseline gap-4 py-4 px-5'>
+    <div className='flex flex-wrap justify-center items-baseline gap-4 py-4 px-5'>
       {
         fileitems && fileitems.map((file,index) => (
           <a href = {file.url} target= 'blank'><Card filedata = {file} indval={index} key = {index}/></a>

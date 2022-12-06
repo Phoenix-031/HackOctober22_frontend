@@ -8,7 +8,8 @@ module.exports = {
     extend: {
       colors: {
         ver1: "#404F5E",
-        yellowtheme:'#f9c041'
+        yellowtheme:'#f9c041',
+        popup:'#2f2d54'
       },
       spacing: {
         w1: '400px',
