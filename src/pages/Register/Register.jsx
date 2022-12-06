@@ -4,6 +4,7 @@ import { useNavigate,Link } from 'react-router-dom';
 import { registerUser } from '../../api/api.auth';
 import LOGO from '../../assets/HGDRY.png'
 import swal from 'sweetalert'
+import LoaderComponent from '../../components/LoaderComponent';
 
 
 const Register = () => {
@@ -11,13 +12,17 @@ const Register = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [registering,setRegistering] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setRegistering(true)
+    
     const res = await registerUser(username, email, password);
     console.log(res);
     if (res.data.success) {
+      setRegistering(false)
       swal("Please verify your email before logging in")
       navigate("/login");
     } else {
@@ -66,8 +71,12 @@ const Register = () => {
           <div className="underline"></div>
         </div>
        
-        <div className="input-box button">
-            <button type='Submit' className='flex justify-center items-center w-full h-max p-4 bg-yellowtheme font-serif rounded-xl text-xl font-semibold'>Register</button>
+        <div className="input-box button flex justify-center items-center">
+            {
+              registering ? (<LoaderComponent />) : (
+                <button type='Submit' className='flex justify-center items-center w-full h-max p-4 bg-yellowtheme font-serif rounded-xl text-xl font-semibold'>Register</button>
+              )
+            }
         </div>
        </form>
        <div className="text">

@@ -28,7 +28,7 @@ const Navbar = () => {
   
   return (
     <header className="header-navbar">
-      <nav className="navbar">
+      <nav className="navbar ">
         <a href="/" className="nav-logo"> QBank</a>
         <ul className="nav-menu">
           <li className="nav-item">

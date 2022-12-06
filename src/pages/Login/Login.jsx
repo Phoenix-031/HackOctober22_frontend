@@ -4,6 +4,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { loginUser } from '../../api/api.auth';
 import LOGO from '../../assets/HGDRY.png'
 import swal from 'sweetalert'
+import LoaderComponent from '../../components/LoaderComponent';
 
 
 
@@ -11,14 +12,17 @@ const Login = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+    const [login,setLogin] = useState(false);
   const navigate = useNavigate();
 
 
   const handleLogin = async (e) => {
   e.preventDefault();
+  setLogin(true)
 
   const res = await loginUser(email, password);
   if (res.data.success) {
+    setLogin(false)
     localStorage.setItem("user",res.data.accessToken)
     navigate("/");
   } else {
@@ -78,8 +82,12 @@ const Login = () => {
       <div className="text self-end text-lg pl-2">
         <Link to='/forgotpassword' className='self-start'>Forgot Password?</Link>
       </div>
-        <div className="input-box">
-          <button type='submit' className='flex justify-center items-center w-full h-max p-4 bg-yellowtheme font-serif font-semibold rounded-xl text-xl'>Log In</button>
+        <div className="input-box flex justify-center items-center ">
+         {
+          login ? (<LoaderComponent />) : (
+             <button type='submit' className='flex justify-center items-center w-full h-max p-4 bg-yellowtheme font-serif font-semibold rounded-xl text-xl'>Log In</button>
+          )
+         }
         </div>
       </form>
       {/* <div className="option">or Connect With Social Media</div>

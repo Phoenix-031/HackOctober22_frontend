@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
 import { fileUpload } from '../../api/api.file';
+import LoaderComponent from '../../components/LoaderComponent';
 import './upload.css'
 
 const UpoadFile = () => {
@@ -15,19 +16,19 @@ const UpoadFile = () => {
   const [subject,setSubject] = useState("");
   const [file,setFile] = useState("")
   const [filename,setFilename] = useState("")
+  const [submit,setSubmit] = useState(false)
   const navigate = useNavigate()
-
-  // useEffect(()= >{
-
-  // },[filename])
   
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setSubmit(true)
+    
     const contributor = "debayan"
     // console.log(file)
 
     if(!file) {
+      setSubmit(false)
       swal("No file has been uploaded!")
       return;
     } 
@@ -37,6 +38,7 @@ const UpoadFile = () => {
     const res = await fileUpload(contributor,insname,year,semester,department,file)
     // console.log(res)
     if(res.data.success){
+      setSubmit(false)
       swal("Thankyou for your contribution!")
       setInsname("")
       setYear("")
@@ -162,10 +164,14 @@ const UpoadFile = () => {
             <div className="underline"></div>
           </li>
           <li>
-            <button type="submit" value="Submit" className='font-semibold text-black bg-yellowtheme font-nunito w-max px-14 py-5 rounded-xl text-2xl'>Submit</button>
+            {
+              submit ? (<LoaderComponent />) : (
+                <button type="submit" value="Submit" className='font-semibold text-black bg-yellowtheme font-nunito w-max px-14 py-5 rounded-xl text-2xl'>Submit</button>
+              )
+            }
           </li>
         </ul>
-      <div className="drag-area">
+      <div className="drag-area" type="file">
         <div className="icon"><i className="fas fa-cloud-upload-alt"></i></div>
         <header>Drag & Drop to Upload File</header>
         <span>OR</span>

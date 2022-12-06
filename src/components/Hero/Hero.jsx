@@ -25,11 +25,8 @@ const Hero = () => {
          const result =await filterItems(insname,year,semester,department)
          localStorage.setItem("files",JSON.stringify(result))
          navigate('/search')
-          // console.log(result)
     }
 
-    
-    // const result =
 
   }
   
